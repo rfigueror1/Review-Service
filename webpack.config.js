@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  context: __dirname + '/client',
+  context: __dirname + '/client/src',
   entry: './index.jsx',
   module: {
     loaders: [
@@ -17,7 +17,7 @@ module.exports = {
     ],
   },
   output: {
-    path: __dirname + '/public',
+    path: __dirname + '/client/dist',
     filename: 'app.js',
   }
 };
