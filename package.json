@@ -1,9 +1,8 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
+  "name": "review-service",
+  "description": "> Project description",
   "author": "",
-  "license": "",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
@@ -27,12 +26,29 @@
     "webpack": "^3.11.0"
   },
   "devDependencies": {
+    "ajv": "^6.5.2",
     "axios": "^0.18.0",
     "bluebird": "^3.5.1",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
     "image-downloader": "^3.4.1",
     "random-date-generator": "^1.0.2",
+    "webpack": "^4.16.1",
     "webpack-cli": "^3.1.0",
     "xml-js": "^1.6.7"
-  }
+  },
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullstakreaktor/Review-Service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fullstakreaktor/Review-Service/issues"
+  },
+  "homepage": "https://github.com/fullstakreaktor/Review-Service#readme"
 }
