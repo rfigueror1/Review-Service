@@ -8,10 +8,17 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "test": "jest"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.0",
+    "babel-preset-env": "^1.7.0",
+    "enzyme": "^3.3.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "jest": "^23.4.1",
+    "jest-enzyme": "^6.0.2",
+    "puppeteer": "^1.6.0"
   }
 }
