@@ -9,7 +9,7 @@ const height = 720;
 beforeAll(async () => {
   browser = await puppeteer.launch({
     headless: false,
-    slowMo: 80,
+    // slowMo: 80,
     args: [`--window-size=${width},${height}`]
   });
   page = await browser.newPage();
@@ -23,7 +23,7 @@ afterAll(() => {
 describe('something to test', () => {
 
   beforeEach(async () => {
-    await page.goto(pageUrl, {waitUntil: 'networkidle2'});
+    await page.goto(pageURL, {waitUntil: 'networkidle2'});
   });
 
   test('some kind of test', () => {
