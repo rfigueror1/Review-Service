@@ -8,7 +8,7 @@ const height = 720;
 
 beforeAll(async () => {
   browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     // slowMo: 80,
     args: [`--window-size=${width},${height}`]
   });
@@ -17,7 +17,7 @@ beforeAll(async () => {
 });
 
 afterAll(() => {
-  // browser.close();
+  browser.close();
 });
 
 describe('something to test', () => {
