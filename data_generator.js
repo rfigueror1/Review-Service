@@ -4,6 +4,7 @@ const download = require('image-downloader');
 const XMLParser = require('xml-js');
 const DateGen = require('random-date-generator');
 const loremIpsum = require('lorem-ipsum');
+const db = require('./database/config.js');
 
 const getPhotos = () => {
   var origUrls = [];
@@ -75,6 +76,7 @@ const getAWSPhotos = () => {
 }
 
 const insertUsers = () => {
+    let qs;
   var names = [
     'PetitAnge',
     'ChooChoo',
@@ -211,7 +213,6 @@ const insertUsers = () => {
     'Nightmare',
     'Tissot',
     'TomTom',
-    'Razzmatazz'
   ]
 
   var photos = [
@@ -354,7 +355,15 @@ const insertUsers = () => {
 
   for (var i = 0; i < names.length; i++) {
     //write query here
+    qs = `INSERT INTO users (name, photo) VALUES ("${names[i]}", "${photos[i]}")`;
+    db.query(qs, function(err) {
+        if (err) {
+            console.log(err);
+        }
+    });
   }
+
+  console.log('users should be inserted');
 }
 
 const getContent = () => {
@@ -425,27 +434,83 @@ const getDate = () => {
   return randoDate.toISOString().slice(0, 19).replace('T', ' ');
 };
 
-const getReviews = () => {
-    let accuracy = getRating();
-    let communication = getRating();
-    let cleanliness = getRating();
-    let location = getRating();
-    let check_in = getRating();
-    let value = getRating();
-    let date = getDate();
-    let content = getContent();
+const getReview = () => {
+    let returnObj = {};
+    returnObj.accuracy = getRating();
+    returnObj.communication = getRating();
+    returnObj.cleanliness = getRating();
+    returnObj.location = getRating();
+    returnObj.check_in = getRating();
+    returnObj._value = getRating();
+    returnObj.date = getDate();
+    returnObj._content = getContent();
+
+    return returnObj;
 }
 
-const getListings = () => {
+const getUsers = () => {
+    let numOfRev = Math.floor(Math.random() * (135 - 1) + 1);
+    let total_user_ids = [];
+    let user_ids =[];
+    for (let i = 1; i <= 135; i++) {
+        total_user_ids.push(i);
+    }
+
+    for (let i = 0; i < numOfRev; i++) {
+        let randIndex = total_user_ids.splice(Math.floor(Math.random() * total_user_ids.length), 1).pop();
+        user_ids.push(randIndex);
+    }
+
+    return user_ids;
+} 
+
+const insertReviews = () => {
+    let qs;
+    for (let i = 1; i <= 100; i++) {
+        let listing_id = i;
+        let users = getUsers();
+        users.forEach(function(user) {
+            let review = getReview();
+            review.listing_id = listing_id;
+            review.user_id = user;
+
+            qs = `INSERT INTO reviews (listing_id, user_id, accuracy, communication, cleanliness, location, check_in, \
+                  value, _date, content) \
+                  VALUES ("${review.listing_id}", "${review.user_id}", "${review.accuracy}", "${review.communication}", \
+                   "${review.cleanliness}", "${review.location}", "${review.check_in}", "${review._value}", "${review.date}", "${review._content}")`;
+            db.query(qs, function(err) {
+                if(err) {
+                    console.log(err);
+                }
+            })
+        });
+    }
+
+    console.log('reviews should be inserted');
+}
+
+const insertListings = () => {
     const listings = [];
+    let qs; 
     for (let i = 0; i < 100; i++) {
         let listing = loremIpsum({units: 'sentences'});
         listings.push(listing);
     }
 
 
-    return listings;
+    for (let i = 0; i < listings.length; i++) {
+        qs = `INSERT INTO listings (name) VALUES ("${listings[i]}")`;
+        db.query(qs, function(err) {
+            if (err) {
+                console.log(err);
+            }
+        })
+    }
+
+    console.log('listings should be inserted');
 };
 
 
-getListings();
+insertUsers();
+insertListings();
+insertReviews();
