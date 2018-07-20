@@ -22,9 +22,9 @@ afterAll(() => {
 
 describe('something to test', () => {
 
-  beforeEach(async () => {
-    await page.goto(pageURL, {waitUntil: 'networkidle2'});
-  });
+  // beforeEach(async () => {
+  //   await page.goto(pageURL, {waitUntil: 'networkidle2'});
+  // });
 
   test('some kind of test', () => {
 
