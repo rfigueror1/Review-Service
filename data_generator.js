@@ -1,7 +1,9 @@
+
 const axios = require('axios');
 const download = require('image-downloader');
 const XMLParser = require('xml-js');
 const DateGen = require('random-date-generator');
+const loremIpsum = require('lorem-ipsum');
 
 const getPhotos = () => {
   var origUrls = [];
@@ -421,11 +423,29 @@ const getDate = () => {
 
   var randoDate = DateGen.getRandomDateInRange(start, end);
   return randoDate.toISOString().slice(0, 19).replace('T', ' ');
+};
+
+const getReviews = () => {
+    let accuracy = getRating();
+    let communication = getRating();
+    let cleanliness = getRating();
+    let location = getRating();
+    let check_in = getRating();
+    let value = getRating();
+    let date = getDate();
+    let content = getContent();
 }
 
-const insertReviews() {
-  
-}
+const getListings = () => {
+    const listings = [];
+    for (let i = 0; i < 100; i++) {
+        let listing = loremIpsum({units: 'sentences'});
+        listings.push(listing);
+    }
 
 
-console.log(getDate());
+    return listings;
+};
+
+
+getListings();
