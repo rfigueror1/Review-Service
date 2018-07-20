@@ -22,6 +22,10 @@ afterAll(() => {
 
 describe('something to test', () => {
 
+  beforeEach(async () => {
+    await page.goto(pageUrl, {waitUntil: 'networkidle2'});
+  });
+
   test('some kind of test', () => {
 
   });
