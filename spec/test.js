@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+
 const pageURL = 'http://localhost:3002';
 
 let page;
@@ -10,7 +11,7 @@ beforeAll(async () => {
   browser = await puppeteer.launch({
     headless: true,
     // slowMo: 80,
-    args: [`--window-size=${width},${height}`]
+    args: [`--window-size=${width},${height}`],
   });
   page = await browser.newPage();
   await page.setViewport({ width, height });
@@ -21,7 +22,6 @@ afterAll(() => {
 });
 
 describe('something to test', () => {
-
   // beforeEach(async () => {
   //   await page.goto(pageURL, {waitUntil: 'networkidle2'});
   // });
@@ -29,4 +29,4 @@ describe('something to test', () => {
   test('some kind of test', () => {
 
   });
-})
+});
