@@ -26,7 +26,7 @@ CREATE TABLE reviews (
   cleanliness DECIMAL(2,1) NOT NULL, 
   location DECIMAL(2,1) NOT NULL,
   check_in DECIMAL(2,1) NOT NULL,
-  value DECIMAL(2,1) NOT NULL,
+  _value DECIMAL(2,1) NOT NULL,
   _date datetime NOT NULL,
   content text,
   is_reported boolean NULL,

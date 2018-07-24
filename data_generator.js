@@ -1,8 +1,12 @@
 
 const axios = require('axios');
+
 const download = require('image-downloader');
+
 const XMLParser = require('xml-js');
+
 const DateGen = require('random-date-generator');
+
 const loremIpsum = require('lorem-ipsum');
 const db = require('./database/config.js');
 
@@ -76,8 +80,8 @@ const getAWSPhotos = () => {
 }
 
 const insertUsers = () => {
-    let qs;
-  var names = [
+  let qs;
+  const names = [
     'PetitAnge',
     'ChooChoo',
     'Horshack',
@@ -213,9 +217,9 @@ const insertUsers = () => {
     'Nightmare',
     'Tissot',
     'TomTom',
-  ]
+  ];
 
-  var photos = [
+  const photos = [
     'https://s3-us-west-1.amazonaws.com/adamdogpics/Akita_Inu_dog.jpg',
     'https://s3-us-west-1.amazonaws.com/adamdogpics/IMAG1063.jpeg',
     'https://s3-us-west-1.amazonaws.com/adamdogpics/IMG_081858.jpg',
@@ -465,29 +469,29 @@ const getUsers = () => {
 } 
 
 const insertReviews = () => {
-    let qs;
-    for (let i = 1; i <= 100; i++) {
-        let listing_id = i;
-        let users = getUsers();
-        users.forEach(function(user) {
-            let review = getReview();
-            review.listing_id = listing_id;
-            review.user_id = user;
+  let qs;
+  for (let i = 1; i <= 100; i++) {
+    let listing_id = i;
+    let users = getUsers();
+    users.forEach(function(user) {
+      let review = getReview();
+      review.listing_id = listing_id;
+      review.user_id = user;
 
-            qs = `INSERT INTO reviews (listing_id, user_id, accuracy, communication, cleanliness, location, check_in, \
-                  value, _date, content) \
-                  VALUES ("${review.listing_id}", "${review.user_id}", "${review.accuracy}", "${review.communication}", \
-                   "${review.cleanliness}", "${review.location}", "${review.check_in}", "${review._value}", "${review.date}", "${review._content}")`;
-            db.query(qs, function(err) {
-                if(err) {
-                    console.log(err);
-                }
-            })
-        });
-    }
+      qs = `INSERT INTO reviews (listing_id, user_id, accuracy, communication, cleanliness, location, check_in, \
+            _value, _date, content) \
+            VALUES ("${review.listing_id}", "${review.user_id}", "${review.accuracy}", "${review.communication}", \
+             "${review.cleanliness}", "${review.location}", "${review.check_in}", "${review._value}", "${review.date}", "${review._content}")`;
+      db.query(qs, function(err) {
+          if(err) {
+              console.log(err);
+          }
+      });
+    });
+  }
 
-    console.log('reviews should be inserted');
-}
+  console.log('reviews should be inserted');
+};
 
 const insertListings = () => {
     const listings = [];
@@ -499,7 +503,7 @@ const insertListings = () => {
 
 
     for (let i = 0; i < listings.length; i++) {
-        qs = `INSERT INTO listings (name) VALUES ("${listings[i]}")`;
+      qs = `INSERT INTO listings (name) VALUES ("${listings[i]}")`;
         db.query(qs, function(err) {
             if (err) {
                 console.log(err);
