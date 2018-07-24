@@ -1,7 +1,7 @@
 var db = require('./config.js');
 
 const getRatings = (listing_id, whenRatings) => {
-  const qs = `SELECT accuracy, communication, cleanliness, location, check_in, value \
+  const qs = `SELECT accuracy, communication, cleanliness, location, check_in, _value \
               FROM reviews WHERE listing_id = ${listing_id}`;
 
   db.query(qs, whenRatings);

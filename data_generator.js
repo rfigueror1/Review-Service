@@ -479,7 +479,7 @@ const insertReviews = () => {
       review.user_id = user;
 
       qs = `INSERT INTO reviews (listing_id, user_id, accuracy, communication, cleanliness, location, check_in, \
-            value, _date, content) \
+            _value, _date, content) \
             VALUES ("${review.listing_id}", "${review.user_id}", "${review.accuracy}", "${review.communication}", \
              "${review.cleanliness}", "${review.location}", "${review.check_in}", "${review._value}", "${review.date}", "${review._content}")`;
       db.query(qs, function(err) {
