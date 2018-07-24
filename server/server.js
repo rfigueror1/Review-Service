@@ -22,6 +22,7 @@ app.get('/api/listing/:listingid/overview', (req, res) => {
   db.getRatings(listing_id, function(err, results) {
     if (err) {
       console.log('err in server - overview: ', err)
+      return;
     }
 
     ratingsObj.total = results.length;
@@ -67,6 +68,7 @@ app.get('/api/listing/:listingid/reviews', (req, res) => {
   db.getReviews(listing_id, function(err, results) {
     if (err) {
       console.log('err in server - reviews: ', err)
+      return;
     }
 
     res.status(200).json(results);

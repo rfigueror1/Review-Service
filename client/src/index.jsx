@@ -15,7 +15,6 @@ class App extends React.Component {
       ratings: {}
     }
 
-    this.getRatings = this.getRatings.bind(this);
   }
 
   componentDidMount() {
