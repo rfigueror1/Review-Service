@@ -12,4 +12,4 @@ const Overview = (props) => {
   ) 
 }
 
-module.exports = Overview;
+module.exports.Overview = Overview;
