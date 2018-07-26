@@ -1,6 +1,7 @@
 import React from 'react';
 import Summary from './summary.jsx';
 import Breakdown from './Breakdown.jsx';
+import styles from './overviewStyles.css'
 
 const Overview = (props) => {
 
@@ -12,4 +13,5 @@ const Overview = (props) => {
   ) 
 }
 
+export default CSSModules(Breakdown, styles);
 module.exports.Overview = Overview;
