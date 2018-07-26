@@ -52,7 +52,6 @@ class App extends React.Component {
   render() {
     return (
       <div styleName='main-container'>
-        <p styleName="blue">this is working?</p>
         <Overview ratings={this.state.ratings}/>
       </div>
     );

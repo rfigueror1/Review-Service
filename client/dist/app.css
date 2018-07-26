@@ -45,6 +45,58 @@
 .-pawStyles-small-2NsXzd- {
   width: 16px;
   height: 16px;
+}.-breakdownStyles-clearfix-28LnkG-::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.-breakdownStyles-main-container-6fDYS_- {
+  padding: 20px 0 0 0;
+}.-subBreakdownStyles-clearfix-2mxBuo-::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.-subBreakdownStyles-sub-container-1SaZ-E- {
+  width: 50%;
+}
+
+.-subBreakdownStyles-left-box-xyMOCe- {
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+.-subBreakdownStyles-right-box-2U27NN- {
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+
+.-subBreakdownStyles-left-3jC4aE- {
+  float: left;
+}
+
+.-subBreakdownStyles-right-24DFIZ- {
+  float: right;
+}
+
+.-subBreakdownStyles-row-RODzAd- {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.-subBreakdownStyles-sub-row-1NM3PS- {
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.-subBreakdownStyles-title-UTcZC7- {
+  
+}
+
+.-subBreakdownStyles-paws-container-276TME- {
+  margin-top: -2px;
 }html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -95,15 +147,10 @@ h2 {
   line-height: 30px;
 }
 
-
-.-app-blue-Dbum40- {
-  color: blue;
-}
-
 .-app-main-container-JW4aL4- {
   width: 648px;
   color: #484848;
-  margin-left: 20px;
+  margin: 20px;
   font-weight: normal;
   letter-spacing: normal !important;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;

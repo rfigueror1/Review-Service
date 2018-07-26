@@ -48,15 +48,10 @@ h2 {
   line-height: 30px;
 }
 
-
-.blue {
-  color: blue;
-}
-
 .main-container {
   width: 648px;
   color: #484848;
-  margin-left: 20px;
+  margin: 20px;
   font-weight: normal;
   letter-spacing: normal !important;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
