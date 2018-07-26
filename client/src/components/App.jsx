@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Overview from './Overview.jsx';
 import CSSModules from 'react-css-modules';
-import styles from './styles.css';
+import styles from './app.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,7 +30,6 @@ class App extends React.Component {
     axios.get(`http://localhost:3002/api/listing/${listing_id}/reviews`)
       .then(function(response) {
         self.setState({allReviews: response.data});
-        console.log(response);
       })
       .catch(function(err) {
         console.log(err);
@@ -44,7 +43,6 @@ class App extends React.Component {
     axios.get(`http://localhost:3002/api/listing/${listing_id}/overview`)
       .then(function(response) {
         self.setState({ratings: response.data});
-        console.log(response);
       })
       .catch(function(err) {
         console.log(err);
@@ -53,7 +51,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div styleName='main-container'>
         <p styleName="blue">this is working?</p>
         <Overview ratings={this.state.ratings}/>
       </div>
@@ -61,6 +59,6 @@ class App extends React.Component {
   }
 }
 
-module.exports = App;
-
 export default CSSModules(App, styles);
+
+module.exports.App = App;

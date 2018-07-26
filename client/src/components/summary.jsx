@@ -1,12 +1,17 @@
 import React from 'react';
+import CSSModules from 'react-css-modules';
+import styles from './summaryStyles.css';
+import Paws from './Paws.jsx'
 
 const Summary = (props) => {
+  let average = props.avg;
   return (
-    <div>
-      <h2>{props.total} Reviews</h2>
-      <p>{props.avg} average</p>
+    <div styleName='summary-main'>
+      <h2 styleName='total'>{props.total} Reviews</h2>
+      <Paws size='big' rating={average} />
     </div>
   )
 }
 
-module.exports = Summary;
+export default CSSModules(Summary, styles);
+module.exports.Summary = Summary;

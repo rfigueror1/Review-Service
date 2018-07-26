@@ -2,8 +2,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  // context: path.join(__dirname, '/client/src'),
-  entry: __dirname + './client/src/index.jsx',
+  context: path.join(__dirname, '/client/src'),
+  entry: './index.jsx',
   module: {
     rules: [
       {
@@ -19,6 +19,15 @@ module.exports = {
           fallback: 'style-loader',
           use: 'css-loader?modules,localIdentName="[name]-[local]-[hash:base64:6]"',
         }),
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+          },
+        },
       },
     ],
   },
