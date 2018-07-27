@@ -1,103 +1,4 @@
-.-summaryStyles-summary-main-3oULMV- {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  vertical-align: center;
-  padding: 32px 0px;
-}
-
-.-summaryStyles-total-XsS5q9- {
-  margin-right: 16px;
-}.-pawsStyles-total-1cpWSv- {
-  margin-right: 16px;
-}
-
-.-pawsStyles-paws-container-3gLlVt- {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-top: 2px;
-}.-pawStyles-paw-73N5QA- {
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-right: 6px;
-}
-
-.-pawStyles-full-1g1ySY- {
-  background-image: url('/assets/full.png');
-}
-
-.-pawStyles-half-20nPml- {
-  background-image: url('/assets/half.png');
-}
-
-.-pawStyles-empty-3Ny7mt- {
-  background-image: url('/assets/empty.png');
-}
-
-.-pawStyles-big-2iyXfn- {
-  width: 18px;
-  height: 18px;
-}
-
-.-pawStyles-small-2NsXzd- {
-  width: 16px;
-  height: 16px;
-}.-breakdownStyles-clearfix-28LnkG-::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.-breakdownStyles-main-container-6fDYS_- {
-  padding: 20px 0 0 0;
-}.-subBreakdownStyles-clearfix-2mxBuo-::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.-subBreakdownStyles-sub-container-1SaZ-E- {
-  width: 50%;
-}
-
-.-subBreakdownStyles-left-box-xyMOCe- {
-  padding-right: 16px;
-  box-sizing: border-box;
-}
-
-.-subBreakdownStyles-right-box-2U27NN- {
-  padding-left: 16px;
-  box-sizing: border-box;
-}
-
-.-subBreakdownStyles-left-3jC4aE- {
-  float: left;
-}
-
-.-subBreakdownStyles-right-24DFIZ- {
-  float: right;
-}
-
-.-subBreakdownStyles-row-RODzAd- {
-  width: 100%;
-  margin-bottom: 24px;
-}
-
-.-subBreakdownStyles-sub-row-1NM3PS- {
-  box-sizing: border-box;
-  width: 50%;
-}
-
-.-subBreakdownStyles-title-UTcZC7- {
-  
-}
-
-.-subBreakdownStyles-paws-container-276TME- {
-  margin-top: -2px;
-}html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -252,4 +153,103 @@ h2 {
 
 .-reviewEntryStyles-content-3or8n_- {
   margin-top: 16px;
+}.-summaryStyles-summary-main-3oULMV- {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  vertical-align: center;
+  padding: 32px 0px;
+}
+
+.-summaryStyles-total-XsS5q9- {
+  margin-right: 16px;
+}.-pawsStyles-total-1cpWSv- {
+  margin-right: 16px;
+}
+
+.-pawsStyles-paws-container-3gLlVt- {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 2px;
+}.-pawStyles-paw-73N5QA- {
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 6px;
+}
+
+.-pawStyles-full-1g1ySY- {
+  background-image: url('/assets/full.png');
+}
+
+.-pawStyles-half-20nPml- {
+  background-image: url('/assets/half.png');
+}
+
+.-pawStyles-empty-3Ny7mt- {
+  background-image: url('/assets/empty.png');
+}
+
+.-pawStyles-big-2iyXfn- {
+  width: 18px;
+  height: 18px;
+}
+
+.-pawStyles-small-2NsXzd- {
+  width: 16px;
+  height: 16px;
+}.-breakdownStyles-clearfix-28LnkG-::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.-breakdownStyles-main-container-6fDYS_- {
+  padding: 20px 0 0 0;
+}.-subBreakdownStyles-clearfix-2mxBuo-::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.-subBreakdownStyles-sub-container-1SaZ-E- {
+  width: 50%;
+}
+
+.-subBreakdownStyles-left-box-xyMOCe- {
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+.-subBreakdownStyles-right-box-2U27NN- {
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+
+.-subBreakdownStyles-left-3jC4aE- {
+  float: left;
+}
+
+.-subBreakdownStyles-right-24DFIZ- {
+  float: right;
+}
+
+.-subBreakdownStyles-row-RODzAd- {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.-subBreakdownStyles-sub-row-1NM3PS- {
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.-subBreakdownStyles-title-UTcZC7- {
+  
+}
+
+.-subBreakdownStyles-paws-container-276TME- {
+  margin-top: -2px;
 }

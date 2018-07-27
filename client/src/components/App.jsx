@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import Overview from './Overview.jsx';
 import CSSModules from 'react-css-modules';
 import styles from './app.css';
 import Pagination from './Pagination.jsx';
 import ReviewList from './ReviewList.jsx';
+import Overview from './Overview.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -22,7 +22,6 @@ class App extends React.Component {
     this.onPageChanged = this.onPageChanged.bind(this);
     this.getReference = this.getReference.bind(this);
     this.revListRef = null;
-    console.log(this.revListRef);
   }
 
   componentDidMount() {
