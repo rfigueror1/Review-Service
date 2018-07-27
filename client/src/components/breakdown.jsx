@@ -28,4 +28,4 @@ const Breakdown = (props) => {
 }
 
 export default CSSModules(Breakdown, styles, {allowMultiple: true});
-module.exports.Breakdown = Breakdown;
+// module.exports.Breakdown = Breakdown;

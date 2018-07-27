@@ -56,4 +56,4 @@ class Paws extends React.Component {
 } 
 
 export default CSSModules(Paws, styles);
-module.exports.Paws = Paws;
+// module.exports.Paws = Paws;

@@ -15,4 +15,4 @@ const Overview = (props) => {
 
 
 export default CSSModules(Overview, styles);
-module.exports.Overview = Overview;
+// module.exports.Overview = Overview;

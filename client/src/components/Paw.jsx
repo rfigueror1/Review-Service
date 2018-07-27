@@ -10,4 +10,4 @@ const Paw = (props) => {
 }
 
 export default CSSModules(Paw, styles, {allowMultiple: true});
-module.exports.Paw = Paw;
+// module.exports.Paw = Paw;

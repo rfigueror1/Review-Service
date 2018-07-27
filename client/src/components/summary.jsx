@@ -14,4 +14,4 @@ const Summary = (props) => {
 }
 
 export default CSSModules(Summary, styles);
-module.exports.Summary = Summary;
+// module.exports.Summary = Summary;
