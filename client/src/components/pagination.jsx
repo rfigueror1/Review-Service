@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import CSSModules from 'react-css-modules';
-import styles from './app.css';
+import styles from './paginationStyles.css';
 
 const LEFT_PAGE = 'LEFT';
 const RIGHT_PAGE = 'RIGHT';
@@ -184,34 +184,42 @@ class Pagination extends React.Component {
     return (
       <Fragment>
         <nav arial-label='Reviews Pagination'>
-          <ul className='pagination'>
+          <ul styleName='pagination-main'>
             {pages.map((page, index) => {
 
               if (page === LEFT_PAGE) return (
                 <li key={index} className='page-item'>
-                  <a className='page-link' href='#' arial-label="Previous" onClick={this.handleMoveLeft}>
-                    <span aria-hidden="true">&lt;</span>
-                    <span className="sr-only">Previous</span>
-                  </a>
+                  <button arial-label="Previous" onClick={this.handleMoveLeft}>
+                    <div styleName='switch'>
+                      <span aria-hidden="true">&lt;</span>
+                    </div>
+                  </button>
                 </li>
               );
 
               if (page === RIGHT_PAGE) return (
                 <li key={index} className="page-item">
-                  <a className="page-link" href="#" aria-label="Next" onClick={this.handleMoveRight}>
-                    <span aria-hidden="true">&gt;</span>
-                    <span className="sr-only">Next</span>
-                  </a>
+                  <button  aria-label="Next" onClick={this.handleMoveRight}>
+                    <div styleName='switch'>
+                      <span aria-hidden="true">&gt;</span>
+                    </div>
+                  </button>
                 </li>
               );
 
               if (page === '...') return (
-                <span className='elipsis' aria-hidden="true">&hellip;</span>
+                <li key={index} className="page-item">
+                  <span className='elipsis' aria-hidden="true">&hellip;</span>
+                </li>
               )
 
               return (
-                <li key={index} className={`page-item${ currentPage === page ? ' active' : ''}`}>
-                  <a className='page-link' href='#' onClick={ (evt) => this.handleClick(evt, page) }>{ page }</a>
+                <li key={index} styleName={`page-item${ currentPage === page ? ' active' : ''}`}>
+                  <button onClick={ (evt) => this.handleClick(evt, page) }>
+                    <div>
+                      { page }
+                    </div>
+                  </button>
                 </li>
               );
             })}
@@ -229,4 +237,4 @@ Pagination.propTypes = {
   onPageChanged: PropTypes.func
 }
 
-export default CSSModules(Pagination, styles);
+export default CSSModules(Pagination, styles, {allowMultiple: true});
