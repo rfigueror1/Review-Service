@@ -16,8 +16,6 @@ const Breakdown = (props) => {
   rightRatings['Check-in'] = props.ratings.cleanliness;
   rightRatings['Value'] = props.ratings._value;
 
-  console.log(leftRatings);
-  console.log(rightRatings);
 
   return (
     <div styleName='clearfix main-container'>

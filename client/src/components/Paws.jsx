@@ -12,13 +12,11 @@ class Paws extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('nextProps ', nextProps);
     this.rating = nextProps.rating;
   }
 
   getPaws() {
     const arr = [];
-    console.log(this.rating);
     let addHalf = !(this.rating === Math.floor(this.rating));
     let fullPaws = Math.floor(this.rating);
     let emptyPaws = 4 - fullPaws;
@@ -39,7 +37,6 @@ class Paws extends React.Component {
       arr.push(`paw empty ${this.size}`);
     }
 
-    console.log(arr);
 
     return arr;
   }

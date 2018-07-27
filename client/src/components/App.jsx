@@ -3,6 +3,7 @@ import axios from 'axios';
 import Overview from './Overview.jsx';
 import CSSModules from 'react-css-modules';
 import styles from './app.css';
+import Pagination from './Pagination.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,13 +15,26 @@ class App extends React.Component {
       currentReviews: [],
       currentPage: null,
       totalPages: null,
-      ratings: {}
-    }
+      ratings: {},
+    };
+
+    this.onPageChanged = this.onPageChanged.bind(this);
   }
 
   componentDidMount() {
     this.getRatings();
     this.getReviews();
+  }
+
+  onPageChanged(data) {
+    console.log('app data', data);
+    const { allReviews } = this.state;
+    const { currentPage, totalPages, pageLimit } = data;
+
+    const offset = (currentPage - 1) * pageLimit;
+    const currentReviews = allReviews.slice(offset, offset + pageLimit);
+
+    this.setState({ currentPage, currentReviews, totalPages });
   }
 
   getReviews() {
@@ -50,9 +64,14 @@ class App extends React.Component {
   }
 
   render() {
+    const { allReviews, currentReviews, currentPage, totalPages } = this.state;
+    const totalReviews = allReviews.length;
+    console.log('total reviews, ', totalReviews)
+
     return (
       <div styleName='main-container'>
         <Overview ratings={this.state.ratings}/>
+        <Pagination totalRecords={totalReviews} pageNeighbours={1} onPageChanged={this.onPageChanged} />
       </div>
     );
   }
