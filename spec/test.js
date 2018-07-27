@@ -30,8 +30,3 @@ describe('something to test', () => {
 
   });
 });
-
-describe('state should be set at page load', () => {
-
-  
-});
