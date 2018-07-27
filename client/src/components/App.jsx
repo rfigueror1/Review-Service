@@ -4,6 +4,7 @@ import Overview from './Overview.jsx';
 import CSSModules from 'react-css-modules';
 import styles from './app.css';
 import Pagination from './Pagination.jsx';
+import ReviewList from './ReviewList.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,6 +20,9 @@ class App extends React.Component {
     };
 
     this.onPageChanged = this.onPageChanged.bind(this);
+    this.getReference = this.getReference.bind(this);
+    this.revListRef = null;
+    console.log(this.revListRef);
   }
 
   componentDidMount() {
@@ -27,7 +31,6 @@ class App extends React.Component {
   }
 
   onPageChanged(data) {
-    console.log('app data', data);
     const { allReviews } = this.state;
     const { currentPage, totalPages, pageLimit } = data;
 
@@ -63,15 +66,19 @@ class App extends React.Component {
       });
   }
 
+  getReference(ref) {
+    this.revListRef = ref;
+  }
+
   render() {
     const { allReviews, currentReviews, currentPage, totalPages } = this.state;
     const totalReviews = allReviews.length;
-    console.log('total reviews, ', totalReviews)
 
     return (
       <div styleName='main-container'>
-        <Overview ratings={this.state.ratings}/>
-        <Pagination totalRecords={totalReviews} pageNeighbours={1} onPageChanged={this.onPageChanged} />
+        <Overview ratings={this.state.ratings} />
+        <ReviewList reviews={currentReviews} getRef={this.getReference}/>
+        <Pagination revListRef={this.revListRef} totalRecords={totalReviews} pageNeighbours={1} onPageChanged={this.onPageChanged} />
       </div>
     );
   }

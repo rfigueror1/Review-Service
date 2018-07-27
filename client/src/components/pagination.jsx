@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import CSSModules from 'react-css-modules';
 import styles from './paginationStyles.css';
@@ -45,13 +46,15 @@ class Pagination extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('nextProps', nextProps);
     if (nextProps.totalRecords !== this.totalRecords) {
       this.totalRecords = nextProps.totalRecords;
       this.pageNeighbours = nextProps.pageNeighbours;
       this.totalPages = Math.ceil(this.totalRecords / this.pageLimit);
       this.setState({currentPage: 1}, function() {
-        this.gotoPage(this.state.currentPage);
+      this.gotoPage(this.state.currentPage);
+      if (nextProps.revListref !== null) {
+        this.revListRef = nextProps.revListRef;
+      }
       });
     }
   }
@@ -63,7 +66,6 @@ class Pagination extends React.Component {
   gotoPage(page) {
     // this means? - maybe: onPageChanged = props.onPageChanged || a function that returns the value passed to it
     const { onPageChanged = f => f } = this.props;
-    console.log('page', page);
 
     //this sets the currentPage to be 0, the passed in page, or the last page?
     const currentPage = Math.max(0, Math.min(page, this.totalPages));
@@ -83,16 +85,20 @@ class Pagination extends React.Component {
   handleClick(evt, page) {
     evt.preventDefault();
     this.gotoPage(page);
+    ReactDOM.findDOMNode(this.revListRef).scrollIntoView({block: 'start', inline: 'start', behavior: 'smooth'});
   }
 
   handleMoveLeft(evt) {
     evt.preventDefault();
     this.gotoPage(this.state.currentPage - 1);
+    ReactDOM.findDOMNode(this.revListRef).scrollIntoView({block: 'start', inline: 'start', behavior: 'smooth'});
   }
 
   handleMoveRight(evt) {
     evt. preventDefault();
     this.gotoPage(this.state.currentPage + 1);
+    console.log(this.refs)
+    ReactDOM.findDOMNode(this.revListRef).scrollIntoView({block: 'start', inline: 'start', behavior: 'smooth'});
   }
 
   fetchPageNumbers() {

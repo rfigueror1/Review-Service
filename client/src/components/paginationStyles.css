@@ -1,4 +1,6 @@
+
 .pagination-main {
+  margin-top: 28px;
   display: flex;
   flex-direction: row;
 }
