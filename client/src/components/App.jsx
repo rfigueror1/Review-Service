@@ -1,11 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import path from 'path';
-import CSSModules from 'react-css-modules';
-import styles from './app.css';
-import Pagination from  path.join(__dirname, '/Pagination.jsx');
+import Pagination from  './Pagination.jsx';
 import ReviewList from './ReviewList.jsx';
 import Overview from './Overview.jsx';
+import CSSModules from 'react-css-modules';
+import styles from './app.css';
 
 class App extends React.Component {
   constructor(props) {
