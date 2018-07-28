@@ -1,8 +1,8 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './breakdownStyles.css';
-import SubBreakdownLeft from './SubBreakdownLeft.jsx'
-import SubBreakdownRight from './SubBreakdownRight.jsx'
+import SubBreakdownLeft from './subBreakdownLeft.jsx'
+import SubBreakdownRight from './subBreakdownRight.jsx'
 
 const Breakdown = (props) => {
 

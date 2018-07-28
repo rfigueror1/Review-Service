@@ -1,7 +1,7 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './summaryStyles.css';
-import Paws from './Paws.jsx'
+import Paws from './paws.jsx'
 
 const Summary = (props) => {
   let average = props.avg;

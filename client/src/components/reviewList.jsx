@@ -5,7 +5,7 @@ import CSSModules from 'react-css-modules';
 
 import styles from './reviewListStyles.css';
 
-import ReviewEntry from './ReviewEntry.jsx';
+import ReviewEntry from './reviewEntry.jsx';
 
 class ReviewList extends React.Component {
   constructor(props) {
