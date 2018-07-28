@@ -54,49 +54,7 @@
   background-color: #008489 !important;
   color: #ffffff !important;
 }
-.-reviewListStyles-review-list-CoHGIY- {
-  
-}.-reviewEntryStyles-review-entry-3oCkJg- {
-  padding: 26px 0;
-  border-bottom: 1px solid #ccc;
-}
-
-.-reviewEntryStyles-header-container-3bWyOt- {
-  display: flex;
-  flex-direction: row;
-}
-
-.-reviewEntryStyles-review-info-GYhFpM- {
-  margin-left: 16px;
-}
-
-.-reviewEntryStyles-photo-container-3lvX6_- {
-  width: 48px;
-  height: 48px;
-  display: block;
-  position: relative;
-}
-
-.-reviewEntryStyles-avatar-1gdTEu- {
-  overflow: hidden;
-  border-radius: 50% !important;
-  border: 2px solid #ffffff !important;
-}
-
-.-reviewEntryStyles-user-name-2omWjX- {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.-reviewEntryStyles-review-date-_K8qnz- {
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.-reviewEntryStyles-content-3or8n_- {
-  margin-top: 16px;
-}.-summaryStyles-summary-main-3oULMV- {
+.-summaryStyles-summary-main-3oULMV- {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   display: flex;
