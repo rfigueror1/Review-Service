@@ -14,6 +14,7 @@ const range = (from, to) => {
   while (i <= to) {
     range.push(i);
     i++;
+    
   }
 
   return range;
