@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import path from 'path';
-import Pagination from  './pagination.jsx';
-import ReviewList from './reviewList.jsx';
-import Overview from './overview.jsx';
+import Pagination from  './Pagination.jsx';
+import ReviewList from './ReviewList.jsx';
+import Overview from './Overview.jsx';
 import CSSModules from 'react-css-modules';
 import styles from './app.css';
 

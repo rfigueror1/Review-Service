@@ -1,7 +1,7 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './pawsStyles.css';
-import Paw from './paw.jsx'
+import Paw from './Paw.jsx';
 
 class Paws extends React.Component {
   constructor(props) {

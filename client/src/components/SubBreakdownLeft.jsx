@@ -1,7 +1,7 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './subBreakdownStyles.css';
-import Paws from './paws.jsx'
+import Paws from './Paws.jsx'
 
 const SubBreakdownLeft = (props) => {
   

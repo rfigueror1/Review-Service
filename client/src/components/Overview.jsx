@@ -1,6 +1,6 @@
 import React from 'react';
-import Summary from './summary.jsx';
-import Breakdown from './breakdown.jsx';
+import Summary from './Summary.jsx';
+import Breakdown from './Breakdown.jsx';
 import CSSModules from 'react-css-modules';
 import styles from './app.css';
 
