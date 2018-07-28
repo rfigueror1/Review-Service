@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import path from 'path';
 import Pagination from  './pagination.jsx';
-import ReviewList from './peviewList.jsx';
+import ReviewList from './reviewList.jsx';
 import Overview from './overview.jsx';
 import CSSModules from 'react-css-modules';
 import styles from './app.css';
