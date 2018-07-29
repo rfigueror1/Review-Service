@@ -10,8 +10,9 @@ jobs:
       - image: circleci/node:8.11.3-browsers
       - image: circleci/mysql:5.7.22
         environment:
-          - MYSQL_ALLOW_EMPTY_PASSWORD=true
-          - MYSQL_ROOT_HOST=%
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+          MYSQL_ROOT_PASSWORD: ''
+          MYSQL_DATABASE: review_db
 
 
     steps:
