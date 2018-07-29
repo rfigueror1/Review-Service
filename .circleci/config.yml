@@ -23,7 +23,7 @@ jobs:
 
 
       - run: mysql -h 127.0.0.1 -uroot < ./schema.sql
-      - run: node ../data_generator.js
+      - run: node ./data_generator.js
 
       - run:
           command: node ./server/server.js
