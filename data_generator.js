@@ -363,6 +363,7 @@ const insertUsers = () => {
     db.query(qs, function(err) {
         if (err) {
             console.log(err);
+            return;
         }
         console.log('users should be inserted');
     });
@@ -485,6 +486,7 @@ const insertReviews = () => {
       db.query(qs, function(err) {
           if(err) {
               console.log(err);
+              return;
           }
           console.log('reviews should be inserted');
       });
@@ -508,6 +510,7 @@ const insertListings = () => {
         db.query(qs, function(err) {
             if (err) {
                 console.log(err);
+                return;
             }
 
             console.log('listings should be inserted');
@@ -516,6 +519,6 @@ const insertListings = () => {
 };
 
 
-insertUsers();
-insertListings();
-// insertReviews();
+// insertUsers();
+// insertListings();
+insertReviews();
