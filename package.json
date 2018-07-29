@@ -72,7 +72,7 @@
   },
   "jest": {
     "verbose": true,
-    "testURL": "http://localhost/",
+    "testURL": "http://localhost/3002",
     "setupTestFrameworkScriptFile": "./spec/setup.js",
     "moduleNameMapper": {
       "\\.(css|less)$": "identity-obj-proxy"
