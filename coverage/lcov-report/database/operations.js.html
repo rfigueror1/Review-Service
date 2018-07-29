@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for client/src/components/Breakdown.jsx</title>
+    <title>Code coverage report for database/operations.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../prettify.css" />
-    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../../sort-arrow-sprite.png);
+            background-image: url(../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">client/src/components</a> Breakdown.jsx
+      <a href="../index.html">All files</a> / <a href="index.html">database</a> operations.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>8/8</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>8/8</span>
       </div>
     </div>
     <p class="quiet">
@@ -69,72 +69,51 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import CSSModules from 'react-css-modules';
-import styles from './breakdownStyles.css';
-import SubBreakdownLeft from './SubBreakdownLeft.jsx'
-import SubBreakdownRight from './SubBreakdownRight.jsx'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var db = require('./config.js');
 &nbsp;
-const Breakdown = (props) =&gt; {
+const getRatings = (listing_id, whenRatings) =&gt; {
+  const qs = `SELECT accuracy, communication, cleanliness, location, check_in, _value \
+              FROM reviews WHERE listing_id = ${listing_id}`;
 &nbsp;
-  const leftRatings = {};
-  const rightRatings = {};
-&nbsp;
-  leftRatings['Accuracy'] = props.ratings.accuracy;
-  leftRatings['Communication'] = props.ratings.communication;
-  leftRatings['Cleanliness'] = props.ratings.cleanliness;
-  rightRatings['Location'] = props.ratings.cleanliness;
-  rightRatings['Check-in'] = props.ratings.cleanliness;
-  rightRatings['Value'] = props.ratings._value;
-&nbsp;
-&nbsp;
-  return (
-    &lt;div styleName='clearfix main-container'&gt;
-      &lt;SubBreakdownLeft ratings={leftRatings} /&gt;
-      &lt;SubBreakdownRight ratings={rightRatings} /&gt;
-    &lt;/div&gt;
-  ) 
+  db.query(qs, whenRatings);
 }
 &nbsp;
-export default CSSModules(Breakdown, styles, {allowMultiple: true});
-// module.exports.Breakdown = Breakdown;
+const getReviews = (listing_id, whenReviews) =&gt; {
+  const qs = `select users.name, users.photo, reviews._date, reviews.content, reviews.is_reported \
+              FROM users JOIN reviews \
+              WHERE reviews.listing_id = ${listing_id} AND users.id = reviews.user_id
+              ORDER BY reviews._date DESC`;
+&nbsp;
+  db.query(qs, whenReviews); 
+}
+&nbsp;
+module.exports = {
+  getRatings: getRatings,
+  getReviews: getReviews
+}
 &nbsp;
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -145,7 +124,7 @@ export default CSSModules(Breakdown, styles, {allowMultiple: true});
   generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jul 29 2018 01:11:45 GMT-0700 (PDT)
 </div>
 </div>
-<script src="../../../prettify.js"></script>
+<script src="../prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -153,7 +132,7 @@ window.onload = function () {
         }
 };
 </script>
-<script src="../../../sorter.js"></script>
-<script src="../../../block-navigation.js"></script>
+<script src="../sorter.js"></script>
+<script src="../block-navigation.js"></script>
 </body>
 </html>
