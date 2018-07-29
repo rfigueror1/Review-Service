@@ -4,6 +4,7 @@
 #
 version: 2
 jobs:
+  build:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.11.3-browsers
@@ -16,19 +17,12 @@ jobs:
 
     steps:
       - checkout
-       - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+       
       # run tests!
       - run: npm install mysql-client
       - run: npm install
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+
 
       - run: mysql -h 127.0.0.1 -uroot < ../schema.sql
       - run: node ../data_generator.js
