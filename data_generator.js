@@ -364,10 +364,10 @@ const insertUsers = () => {
         if (err) {
             console.log(err);
         }
+        console.log('users should be inserted');
     });
   }
 
-  console.log('users should be inserted');
 }
 
 const getContent = () => {
@@ -486,6 +486,7 @@ const insertReviews = () => {
           if(err) {
               console.log(err);
           }
+          console.log('reviews should be inserted');
       });
     });
   }
@@ -512,8 +513,6 @@ const insertListings = () => {
             console.log('listings should be inserted');
         })
     }
-
-    
 };
 
 
