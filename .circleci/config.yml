@@ -19,8 +19,7 @@ jobs:
        
       # run tests!
       - run: npm install
-      - run: npm install mysql-client
-
+      - run: sudo apt install -y mysql-client
 
       - run: mysql -h 127.0.0.1 -uroot < ./schema.sql
       - run: node ./data_generator.js
