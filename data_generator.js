@@ -490,7 +490,7 @@ const insertReviews = () => {
     });
   }
 
-  console.log('reviews should be inserted');
+
 };
 
 const insertListings = () => {
@@ -508,10 +508,12 @@ const insertListings = () => {
             if (err) {
                 console.log(err);
             }
+
+            console.log('listings should be inserted');
         })
     }
 
-    console.log('listings should be inserted');
+    
 };
 
 
