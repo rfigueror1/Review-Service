@@ -16,6 +16,7 @@ class ReviewList extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     this.reviews = nextProps.reviews;
+    console.log(this.reviews)
   }
 
   render() {
