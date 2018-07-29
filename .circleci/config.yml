@@ -18,7 +18,6 @@ jobs:
       - checkout
        
       # run tests!
-      - run: npm install mysql-client
       - run: npm install
 
 
