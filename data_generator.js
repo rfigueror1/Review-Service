@@ -519,6 +519,6 @@ const insertListings = () => {
 };
 
 
-insertUsers();
-// // insertListings();
+// insertUsers();
+insertListings();
 // insertReviews();
