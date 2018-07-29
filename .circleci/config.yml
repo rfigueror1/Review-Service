@@ -19,7 +19,7 @@ jobs:
        
       # run tests!
       - run: npm install
-
+      - run: npm instal mysql-cli
 
 
       - run: mysql -h 127.0.0.1 -uroot < ./schema.sql
