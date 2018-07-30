@@ -16,8 +16,6 @@ const Breakdown = (props) => {
   rightRatings['Check-in'] = props.ratings.cleanliness;
   rightRatings['Value'] = props.ratings._value;
 
-  console.log(leftRatings);
-  console.log(rightRatings);
 
   return (
     <div styleName='clearfix main-container'>
@@ -28,4 +26,5 @@ const Breakdown = (props) => {
 }
 
 export default CSSModules(Breakdown, styles, {allowMultiple: true});
-module.exports.Breakdown = Breakdown;
+// module.exports.Breakdown = Breakdown;
+

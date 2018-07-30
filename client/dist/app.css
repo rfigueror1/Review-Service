@@ -1,4 +1,102 @@
-.-summaryStyles-summary-main-3oULMV- {
+
+.-paginationStyles-pagination-main-1ECuWn- {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: row;
+}
+
+.-paginationStyles-pagination-main-1ECuWn- li {
+  vertical-align: middle;
+  line-height: 10px;
+  margin-right: 8px;
+  margin-left: 8px;
+  display: inline-block;
+  line-height: 20px;
+}
+
+.-paginationStyles-pagination-main-1ECuWn- li button{
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  font: inherit;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  text-decoration: none;
+  color: #008489;
+  cursor: pointer;
+  text-transform: none;
+}
+
+.-paginationStyles-pagination-main-1ECuWn- li button:focus{
+  outline: none !important;
+}
+
+.-paginationStyles-pagination-main-1ECuWn- li button.-paginationStyles-active-irC4NV- {
+  color: #ffffff;
+}
+
+.-paginationStyles-pagination-main-1ECuWn- li button div {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.-paginationStyles-pagination-main-1ECuWn- li button div.-paginationStyles-switch-3sedUV- {
+  border: 1px solid #008489;;
+}
+
+.-paginationStyles-page-item-3JKo-Y- {
+
+}
+
+.-paginationStyles-active-irC4NV- div{
+  background-color: #008489 !important;
+  color: #ffffff !important;
+}
+.-reviewListStyles-review-list-CoHGIY- {
+  
+}.-reviewEntryStyles-review-entry-3oCkJg- {
+  padding: 26px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.-reviewEntryStyles-header-container-3bWyOt- {
+  display: flex;
+  flex-direction: row;
+}
+
+.-reviewEntryStyles-review-info-GYhFpM- {
+  margin-left: 16px;
+}
+
+.-reviewEntryStyles-photo-container-3lvX6_- {
+  width: 48px;
+  height: 48px;
+  display: block;
+  position: relative;
+}
+
+.-reviewEntryStyles-avatar-1gdTEu- {
+  overflow: hidden;
+  border-radius: 50% !important;
+  border: 2px solid #ffffff !important;
+}
+
+.-reviewEntryStyles-user-name-2omWjX- {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.-reviewEntryStyles-review-date-_K8qnz- {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.-reviewEntryStyles-content-3or8n_- {
+  margin-top: 16px;
+}.-summaryStyles-summary-main-3oULMV- {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   display: flex;
