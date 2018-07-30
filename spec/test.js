@@ -21,12 +21,18 @@ afterAll(() => {
   browser.close();
 });
 
-describe('something to test', () => {
-  // beforeEach(async () => {
-  //   await page.goto(pageURL, {waitUntil: 'networkidle2'});
-  // });
+describe('end to end tests', () => {
+  beforeEach(async () => {
+    await page.goto(pageURL, {waitUntil: 'networkidle2'});
+  });
 
-  test('some kind of test', () => {
+  test('pagination should have correct number of items', async () => {
+    const pagination = '.pagination-main-1ECuWn-';
+    const children = await page.$eval(pagination, e => e.textContent);
+    expect(children.length).toEqual(6);
+  });
+
+  test('clicking right page switch should change number of pages in pagination section', () => {
 
   });
 });
