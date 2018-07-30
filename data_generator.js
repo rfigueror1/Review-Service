@@ -513,7 +513,7 @@ const insertListings = () => {
                 return;
             }
 
-            console.log('listings should be inserted');
+            return;
         })
     }
 };
