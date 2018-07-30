@@ -22,9 +22,9 @@ afterAll(() => {
 });
 
 describe('end to end tests', () => {
-  beforeEach(async () => {
-    await page.goto(pageURL, {waitUntil: 'networkidle2'});
-  });
+  // beforeEach(async () => {
+  // //   await page.goto(pageURL, {waitUntil: 'networkidle2'});
+  // // });
 
   // test('pagination should have correct number of items', async () => {
   //   const pagination = '.-paginationStyles-pagination-main-1ECuWn-';
