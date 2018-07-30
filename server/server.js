@@ -75,6 +75,8 @@ app.get('/api/listing/:listingid/reviews', (req, res) => {
   });
 });
 
+db.end();
+
 app.listen(3002, console.log('Listening on port 3002'));
 
 module.exports = app;
