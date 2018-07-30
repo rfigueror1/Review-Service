@@ -2,7 +2,6 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const dbConnection = require('../database/config.js');
 const db = require('../database/operations.js');
 
 const app = express();
@@ -75,8 +74,6 @@ app.get('/api/listing/:listingid/reviews', (req, res) => {
     res.status(200).json(results);
   });
 });
-
-dbConnection.end();
 
 app.listen(3002, console.log('Listening on port 3002'));
 
