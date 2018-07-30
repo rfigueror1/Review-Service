@@ -21,10 +21,7 @@ jobs:
       # run tests!
       - run: npm install
       - run: sudo apt install mysql-client
-       - run:
-          name: Wait for DB
-          # preinstalled in circleci/* docker image
-          command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120
+    
       - run: mysql -h 127.0.0.1 -uroot < ./schema.sql
       - run: node ./data_generator.js
 
