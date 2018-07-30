@@ -513,13 +513,13 @@ const insertListings = () => {
                 return;
             }
 
-            return;
+            console.log('listings should be inserted');
         })
     }
 };
 
 
-// insertUsers();
+insertUsers();
 insertListings();
-// insertReviews();
+insertReviews();
 db.end();
