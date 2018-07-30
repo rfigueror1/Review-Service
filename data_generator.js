@@ -365,7 +365,6 @@ const insertUsers = () => {
             console.log(err);
             return;
         }
-        console.log('users should be inserted');
     });
   }
 
@@ -488,7 +487,6 @@ const insertReviews = () => {
               console.log(err);
               return;
           }
-          console.log('reviews should be inserted');
       });
     });
   }
@@ -512,8 +510,6 @@ const insertListings = () => {
                 console.log(err);
                 return;
             }
-
-            console.log('listings should be inserted');
         })
     }
 };
