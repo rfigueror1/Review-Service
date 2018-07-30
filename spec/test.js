@@ -27,7 +27,7 @@ describe('end to end tests', () => {
   });
 
   test('pagination should have correct number of items', async () => {
-    const pagination = '.pagination-main-1ECuWn-';
+    const pagination = '.-paginationStyles-pagination-main-1ECuWn-';
     const children = await page.$eval(pagination, e => e.textContent);
     expect(children.length).toEqual(6);
   });
