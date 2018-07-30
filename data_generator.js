@@ -522,3 +522,4 @@ const insertListings = () => {
 // insertUsers();
 insertListings();
 // insertReviews();
+db.end();
