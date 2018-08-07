@@ -36,4 +36,19 @@ From within the root directory:
 npm install -g webpack
 npm install
 ```
+# SDC Project
 
+## Description of data
+
+- For each review (grade from 0 to 5):
+  1. Accuracy
+  2. Communication
+  3. Cleanliness
+  4. Location
+  5. Check - in
+  6 Value
+
+- For each individual review it has the following:
+  1. User
+  2. Date
+  3. Commentary
